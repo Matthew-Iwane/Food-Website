@@ -10,65 +10,127 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
 </head>
+
+<style>
+    .restaurant {
+        text-align: center;
+        margin: 6em 0;
+    }
+    .photo-grid {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        margin: 0 1em;
+        height: auto;
+    }
+
+    .container {
+        position: relative;
+        width: 25%;
+    }
+
+    .image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #000000af;
+    }
+
+    .container:hover .overlay {
+        opacity: 1;
+    }
+
+    .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+</style>
+
 <body>
-    <div class="heading">
-        <h1>Restaurants In Boston!</h1>
+    <div 
+        class="heading" 
+        style="background: linear-gradient(rgba(58, 58, 58, 0.65),rgba(58, 58, 58, 0.65)), url(../assets/asian-rest.jpg);
+        background-size: cover; background-attachment: fixed;"
+    >
+        <h1 style="font-size: 4em; text-transform: uppercase; letter-spacing: .5em;">Restaurants</h1>
     </div>
+
     <nav id="navbar">
-        <h1>Food Page</h1>
+        <h1>Taste Of Asia</h1>
         <ul>
             <li><a href="home.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="recipe.html">Recipe</a></li>
+            <li><a href="recipe.html">Recipes</a></li>
             <li><a href="restaurant.html">Restaurants</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-
-
-    <div class="description">
-        <div class="allston">
-            <h2 style="text-align: center;">Allston</h2>
-            <div class="column">
-                <img src="../images/allston/shabuzen.jpeg">
-                <img src="../images/allston/kaju.jpeg">
-                <img src="../images/allston/bonchon.jpeg">
+    <div class="restaurant">
+        <h2 style="text-align: center;">Allston</h2>
+        <div class="photo-grid">
+            <div class="container">
+                <img src="../images/allston/shabuzen.jpeg" alt="bonchon" class="image">
+                <div class="overlay">
+                    <div class="text">123 Brighton Ave, Boston, MA 02134</div>
+                </div>
             </div>
-        </div>
 
-        <div class="beacon-hills">
-            <h2 style="text-align: center;">Beacon Hills</h2>
-            <div class="column">
-                <img src="../images/allston/shabuzen.jpeg">
-                <img src="../images/allston/kaju.jpeg">
-                <img src="../images/allston/bonchon.jpeg">
-
+            <div class="container">
+                <img src="../images/allston/kaju.jpeg" alt="kaju" class="image">
+                <div class="overlay">
+                    <div class="text">123 Brighton Ave, Boston, MA 02134</div>
+                </div>
             </div>
-        </div>
 
-        <div class="brighton">
-            <h2 style="text-align: center;">Brighton</h2>
-            <div class="column">
-                <img src="../images/allston/shabuzen.jpeg">
-                <img src="../images/allston/kaju.jpeg">
-                <img src="../images/allston/bonchon.jpeg">
-
-            </div>
-        </div>
-
-        <div class="downtown">
-            <h2 style="text-align: center;">Downtown</h2>
-            <div class="column">
-                <img src="../images/allston/shabuzen.jpeg">
-                <img src="../images/allston/kaju.jpeg">
-                <img src="../images/allston/bonchon.jpeg">
-
+            <div class="container">
+                <img src="../images/allston/bonchon.jpeg" alt="bonchon" class="image">
+                <div class="overlay">
+                    <div class="text">123 Brighton Ave, Boston, MA 02134</div>
+                </div>
             </div>
         </div>
     </div>
-</body>
-<footer>
-    &copy Placeholder Footer
-</footer>
+
+    <div class="restaurant">
+        <h2 style="text-align: center;">Brighton</h2>
+        <div class="photo-grid">
+            <img src="../images/allston/shabuzen.jpeg">
+            <img src="../images/allston/kaju.jpeg">
+            <img src="../images/allston/bonchon.jpeg">
+        </div>
+    </div>
+
+    <div class="restaurant">
+        <h2 style="text-align: center;">Downtown</h2>
+        <div class="photo-grid">
+            <img src="../images/allston/shabuzen.jpeg">
+            <img src="../images/allston/kaju.jpeg">
+            <img src="../images/allston/bonchon.jpeg">
+        </div>
+    </div>
+
+
+    </body>
+
+    <footer>
+        &copy Placeholder Footer
+    </footer>
 </html>
